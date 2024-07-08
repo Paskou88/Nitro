@@ -14,5 +14,18 @@ environment
                sh 'mvn clean install'
             }
         }
+        
+stage('SonarQube analysis') {
+    environment 
+{ 
+    scannerHome = tool 'nitro-sonar-scanner'
+}
+    steps {
+              withSonarQubeEnv('nitro-sonarqube-server') { 
+      sh "${scannerHome}/bin/sonar-scanner"
+    } 
+            }
+    
+  }
     }
 }

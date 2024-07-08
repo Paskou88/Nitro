@@ -53,7 +53,6 @@
 	 <distributionManagement>
         <repository>
             <id>repo-git</id>
-            <name>Nitro</name>
             <url>https://github.com/Paskou88/Nitro</url>
         </repository>
     </distributionManagement>
