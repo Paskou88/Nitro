@@ -50,11 +50,11 @@
 			</plugin>
 		</plugins>
 	</build>
-	 <distributionManagement>
-        <repository>
+	<distributionManagement>
+		<repository>
             <id>repo-git</id>
             <url>https://github.com/Paskou88/Nitro</url>
-        </repository>
-    </distributionManagement>
+		</repository>
+	</distributionManagement>
 
 </project>
