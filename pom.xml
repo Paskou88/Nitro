@@ -12,6 +12,7 @@
 	<artifactId>devops</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>helloWorld</name>
+	<packaging>jar</packaging>
 	<description>devops project for Spring Boot</description>
 	<url/>
 	<licenses>
