@@ -9,9 +9,9 @@ environment
     PATH = "/opt/apache-maven-3.8.8/bin: $PATH "
 }
     stages {
-        stage('Build') {
+        stage('Build-maven') {
             steps {
-               sh 'mvn clean install'
+               sh 'mvn clean package'
             }
         }
     }
