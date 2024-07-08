@@ -53,8 +53,8 @@
 	</build>
 	<distributionManagement>
 		<repository>
-            <id>repo-git</id>
-            <url>https://github.com/Paskou88/Nitro</url>
+            <id>dev</id>
+            <url>file://jarstaging</url>
 		</repository>
 	</distributionManagement>
 
