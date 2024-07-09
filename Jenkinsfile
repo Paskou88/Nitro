@@ -42,7 +42,7 @@ stage("Jar Publish") {
                      def uploadSpec = """{
                           "files": [
                             {
-                              "pattern": "target/(*)",
+                              "pattern": "jarstaging/com/example/devops/0.0.1-SNAPSHOT/(*)",
                               "target": "nitro-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
