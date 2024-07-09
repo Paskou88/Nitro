@@ -46,7 +46,7 @@ stage("Jar Publish") {
                               "target": "nitro-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
-                              "exclusions": [ "*.sha1", "*.md5"]
+                              "exclusions": [ "*.sha1", "*.md5","*.pom"]
                             }
                          ]
                      }"""
