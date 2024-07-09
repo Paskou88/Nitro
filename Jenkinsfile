@@ -1,5 +1,5 @@
 def registry = 'https://paskou.jfrog.io/'
-def imageName = 'paskou.jfrog.io/nitro-docker/nitro'
+def imageName = 'paskou.jfrog.io/nitro-docker-local/nitro'
 def version   = '0.0.1-SNAPSHOT'
 pipeline {
     agent {
