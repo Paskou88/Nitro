@@ -1,4 +1,6 @@
 def registry = 'https://paskou.jfrog.io/'
+def imageName = 'paskou.jfrog.io/nitro-docker/nitro'
+def version   = '0.0.1-SNAPSHOT'
 pipeline {
     agent {
         node {
@@ -53,6 +55,30 @@ stage("Jar Publish") {
             
             }
         }   
-    }  
+    }
+   
+    stage(" Docker Build ") {
+      steps {
+        script {
+           echo '<--------------- Docker Build Started --------------->'
+           app = docker.build(imageName+":"+version)
+           echo '<--------------- Docker Build Ends --------------->'
+        }
+      }
+    }
+
+            stage (" Docker Publish "){
+        steps {
+            script {
+               echo '<--------------- Docker Publish Started --------------->'  
+                docker.withRegistry(registry, 'jfrog-cred'){
+                    app.push()
+                }    
+               echo '<--------------- Docker Publish Ended --------------->'  
+            }
+        }
+    }
+
+
     }
 }
