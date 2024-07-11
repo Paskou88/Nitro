@@ -1,6 +1,6 @@
 def registry = 'https://paskou.jfrog.io/'
 def imageName = 'paskou.jfrog.io/nitro-docker-local/nitro'
-def version   = '0.0.1-SNAPSHOT'
+def version   = '0.0.1-snapshot'
 pipeline {
     agent {
         node {
@@ -42,7 +42,7 @@ stage("Jar Publish") {
                      def uploadSpec = """{
                           "files": [
                             {
-                              "pattern": "jarstaging/com/example/devops/0.0.1-SNAPSHOT/(*)",
+                              "pattern": "jarstaging/com/example/devops/0.0.1-snapshot/(*)",
                               "target": "nitro-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
