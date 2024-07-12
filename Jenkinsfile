@@ -80,6 +80,13 @@ stage("Jar Publish") {
             }
         }
     }
+    stage("Deploy"){
+        steps{
+            script{
+                sh'./deploy.sh'
+                }
+                }
+                }
 
 
     }
